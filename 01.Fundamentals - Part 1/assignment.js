@@ -15,5 +15,28 @@ console.log(typeof isIsland);
 console.log(typeof population);
 console.log(typeof language);
 
-// Asignment - let, const, var
+// Assignment - let, const, var
 language = "Bulgarian";
+
+// Assignment - Basic Operators
+const countryHalfPopulation = population / 2;
+console.log(countryHalfPopulation);
+
+population++;
+console.log(population);
+
+const finlandPopulation = 6000000;
+console.log(population > finlandPopulation);
+
+const averageCountryPopulation = 33000000;
+console.log(population > averageCountryPopulation);
+
+let description =
+  country +
+  " is in " +
+  continent +
+  ", and its " +
+  population +
+  " million people speak " +
+  language;
+console.log(description);
