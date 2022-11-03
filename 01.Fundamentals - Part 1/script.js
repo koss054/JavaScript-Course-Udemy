@@ -4,3 +4,14 @@
 
 // let sum = 10 + 20 + 30 + 50;
 // console.log(sum);
+
+// ********************
+// Coding CHallenge #1
+// ********************
+function isFirstBMIHigher(firstMass, firstHeight, secondMass, secondHeight) {
+    let firstBMI = firstMass / (firstHeight * firstHeight);
+    let secondBMI = secondMass / (secondHeight * secondHeight);
+
+    return firstBMI > secondBMI;
+}
+
