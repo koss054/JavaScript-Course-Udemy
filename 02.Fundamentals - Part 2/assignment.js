@@ -90,3 +90,21 @@ const percentages = new Array(percentageOfWorld1(populations[0], countries[0]),
 for (let i = 0; i < percentages.length - 1; i++) {
     console.log(percentages[i]);
 }
+
+// Assignment - Basic Array Operations
+const neighbors = new Array("Romania", "Turkey", "Serbia");
+console.log(neighbors);
+
+neighbors.push("Utopia");
+console.log(neighbors);
+
+neighbors.pop();
+console.log(neighbors);
+
+if (!neighbors.includes("Germany")) {
+    console.log("Probably not a central European country");
+}
+
+const index = neighbors.indexOf("Turkey");
+neighbors[index] = "Macedonia";
+console.log(neighbors);
