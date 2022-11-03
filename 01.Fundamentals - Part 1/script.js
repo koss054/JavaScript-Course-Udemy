@@ -6,7 +6,7 @@
 // console.log(sum);
 
 // ********************
-// Coding CHallenge #1
+// Coding Challenge #1
 // ********************
 function isFirstBMIHigher(firstBMI, secondBMI) {
     return firstBMI > secondBMI;
@@ -43,7 +43,7 @@ console.log(secondCheckBMI);
 checkMarkAndJohnBMI(secondCheckBMI);
 
 // ********************
-// Coding CHallenge #2
+// Coding Challenge #2
 // ********************
 function checkMarkAndJohnBMI(isMarkHigher) {
     if (isMarkHigher) {
@@ -54,7 +54,7 @@ function checkMarkAndJohnBMI(isMarkHigher) {
 }
 
 // ********************
-// Coding CHallenge #3
+// Coding Challenge #3
 // ********************
 function getAverageTeamScore(firstScore, secondScore, thirdScore) {
     return Math.round((firstScore + secondScore + thirdScore) / 3);
@@ -126,6 +126,23 @@ koalasAverageScore
 
 dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore);
 
+// ********************
+// Switch Statement Challenge
+// ********************
+// - redo the switch statement from the video with an if - else variant
 
-// Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
-// § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+const day = "wednesday";
+
+if (day === "monday") {
+    console.log("Tasks for Monday");
+} else if (day === "tuesday") {
+    console.log("Tasks for Tuesday");
+} else if (day === "wednesday" || day === "thursday") {
+    console.log("Tasks for the middle of the week");
+} else if (day === "friday") {
+    console.log("Tasks for Friday");
+} else if (day === "saturday" || day === "sunday") {
+    console.log("Weekend time!");
+} else {
+    console.log("Invalid day!");
+}
