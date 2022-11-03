@@ -31,7 +31,7 @@ const calcTotal = (bills, tips) => {
     for (let i = 0; i < bills.length; i++) {
         totals.push(Number(bills[i]) + Number(tips[i]));
     }
-    
+
     return totals;
 }
 
@@ -42,3 +42,13 @@ const total = calcTotal(bills, tips);
 console.log(`Bills ${bills}`);
 console.log(`Tips ${tips}`);
 console.log(`Totals ${total}`);
+
+// ********************
+// Dot vs. Bracket Notation Challenge
+// ********************
+const jonas = {
+    firstName: "Jonas",
+    friends: ["Michael", "Melvin", "Matilda"]
+};
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`);
