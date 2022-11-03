@@ -83,3 +83,10 @@ if (numNeighbours === 1) {
 } else {
   console.log("No borders.");
 }
+
+// Assignment - Logical Operators
+if (language === "English" && population < 50000000 && !isIsland) {
+  console.log(`You should live in ${country} :D`);
+} else {
+  console.log(`${country} does not meet your criteria D:`);
+}
