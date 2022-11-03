@@ -146,3 +146,17 @@ if (day === "monday") {
 } else {
     console.log("Invalid day!");
 }
+
+// ********************
+// Coding Challenge #4
+// ********************
+function tipCalculator(billTotal) {
+    const tip = billTotal >= 50 && billTotal <= 300 ? billTotal * 0.15 : billTotal * 0.2;
+    const totalValue = billTotal + tip;
+
+    console.log(`The bill was ${billTotal.toFixed(2)}, the tip was ${tip.toFixed(2)} and the total value is ${totalValue.toFixed(2)}`);
+}
+
+tipCalculator(275);
+tipCalculator(40);
+tipCalculator(430);
