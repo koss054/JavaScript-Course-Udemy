@@ -75,3 +75,18 @@ const germany = describePopulation("Germany", 83_000_000);
 console.log(bulgaria);
 console.log(romania);
 console.log(germany); 
+
+// Assignment - Introduction to Arrays
+const populations = new Array(7_000_000, 19_000_000, 83_000_000, 212_000_000);
+const countries = new Array("Bulgaria", "Romania", "Germany", "Brazil");
+
+console.log(populations.length == 4);
+
+const percentages = new Array(percentageOfWorld1(populations[0], countries[0]),
+                              percentageOfWorld1(populations[1], countries[1]),
+                              percentageOfWorld1(populations[2], countries[2]),
+                              percentageOfWorld1(populations[3], countries[3]));
+
+for (let i = 0; i < percentages.length - 1; i++) {
+    console.log(percentages[i]);
+}
