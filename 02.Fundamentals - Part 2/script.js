@@ -19,3 +19,26 @@ checkWinner(avgDolphins, avgKoalas);
 avgDolphins = calcAverage(85, 54, 41);
 avgKoalas = calcAverage(23, 34, 27);
 checkWinner(avgDolphins, avgKoalas);
+
+// ********************
+// Coding Challenge #2
+// ********************
+const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const calcTotal = (bills, tips) => {
+    let totals = new Array();
+
+    for (let i = 0; i < bills.length; i++) {
+        totals.push(Number(bills[i]) + Number(tips[i]));
+    }
+    
+    return totals;
+}
+
+const bills = new Array(125, 555, 44);
+const tips = new Array(calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]));
+const total = calcTotal(bills, tips);
+
+console.log(`Bills ${bills}`);
+console.log(`Tips ${tips}`);
+console.log(`Totals ${total}`);
