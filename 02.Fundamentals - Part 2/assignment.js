@@ -117,3 +117,12 @@ const myCountry = {
     population: 7_000_000,
     neighbors: ["Romania", "Turkey", "Serbia", "Macedonia"]
 };
+
+// Assignment - Dot vs. Bracket Notation
+console.log(`${myCountry.country} has ${myCountry.population / 1_000_000} million ${myCountry.language}-speaking people, ${myCountry.neighbors.length} neigboring countries and a capital called ${myCountry.capital}.`);
+
+myCountry.population += 2_000_000;
+console.log(`${myCountry.population}`);
+
+myCountry['population'] -= 2_000_000;
+console.log(`${myCountry.population}`);
