@@ -7,6 +7,8 @@ const checkWinner = (avgDolphins, avgKoalas) => {
         console.log(`Dolphins win (D: ${avgDolphins} vs. K: ${avgKoalas})`);
     } else if (avgKoalas >= avgDolphins * 2) {
         console.log(`Koalas win (K: ${avgKoalas} vs. D: ${avgDolphins})`);
+    } else {
+        console.log('No team wins.');
     }
 }
 
