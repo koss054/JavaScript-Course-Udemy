@@ -52,3 +52,33 @@ function checkMarkAndJohnBMI(isMarkHigher) {
         console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
     }
 }
+
+// ********************
+// Coding CHallenge #3
+// ********************
+function getAverageTeamScore(firstScore, secondScore, thirdScore) {
+    return Math.round((firstScore + secondScore + thirdScore) / 3);
+}
+
+let dolphinsFirstScore = 96;
+let dolphinsSecondScore = 108;
+let dolphinsThirdScore = 89;
+
+let dolphinsAverageScore 
+    = getAverageTeamScore(dolphinsFirstScore, dolphinsSecondScore, dolphinsThirdScore);
+
+let koalasFirstScore = 88;
+let koalasSecondScore = 91;
+let koalasThirdScore = 110;
+
+let koalasAverageScore 
+    = getAverageTeamScore(koalasFirstScore, koalasSecondScore, koalasThirdScore);
+
+console.log(`Dolphins: ${dolphinsAverageScore} - Koalas: ${koalasAverageScore}`);
+if (dolphinsAverageScore > koalasAverageScore) {
+    console.log("Dolphins win!");
+} else if (dolphinsAverageScore === koalasAverageScore) {
+    console.log("It's a draw!");
+} else {
+    console.log("Koalas win!");
+}
