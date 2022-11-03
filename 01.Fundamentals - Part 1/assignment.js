@@ -120,3 +120,17 @@ function checkLanguagePlace(language) {
 checkLanguagePlace("mandarin");
 checkLanguagePlace("bulgarian");
 checkLanguagePlace("english");
+
+// Assignment - The Ternary Operator
+let aboveOrBelow = population > averageCountryPopulation ? "above" : "below";
+console.log(`${country}'s population is ${aboveOrBelow} average.`);
+ 
+population = 13000000;
+aboveOrBelow = population > averageCountryPopulation ? "above" : "below";
+console.log(`${country}'s population is ${aboveOrBelow} average.`);
+
+population = 130000000;
+aboveOrBelow = population > averageCountryPopulation ? "above" : "below";
+console.log(`${country}'s population is ${aboveOrBelow} average.`);
+
+population = populationBeforeTempChange;
