@@ -60,6 +60,22 @@ function getAverageTeamScore(firstScore, secondScore, thirdScore) {
     return Math.round((firstScore + secondScore + thirdScore) / 3);
 }
 
+function dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore) {
+    console.log(`Dolphins: ${dolphinsAverageScore} - Koalas: ${koalasAverageScore}`);
+    
+    if (dolphinsAverageScore >= 100 || koalasAverageScore >= 100) {
+        if (dolphinsAverageScore > koalasAverageScore) {
+            console.log("Dolphins win!");
+        } else if (dolphinsAverageScore === koalasAverageScore) {
+            console.log("It's a draw!");
+        } else {
+            console.log("Koalas win!");
+        }
+    } else {
+        console.log("No winners - both teams are under 100 points!");
+    }
+}
+
 let dolphinsFirstScore = 96;
 let dolphinsSecondScore = 108;
 let dolphinsThirdScore = 89;
@@ -74,11 +90,42 @@ let koalasThirdScore = 110;
 let koalasAverageScore 
     = getAverageTeamScore(koalasFirstScore, koalasSecondScore, koalasThirdScore);
 
-console.log(`Dolphins: ${dolphinsAverageScore} - Koalas: ${koalasAverageScore}`);
-if (dolphinsAverageScore > koalasAverageScore) {
-    console.log("Dolphins win!");
-} else if (dolphinsAverageScore === koalasAverageScore) {
-    console.log("It's a draw!");
-} else {
-    console.log("Koalas win!");
-}
+dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore);
+
+// Data Bonus 1
+dolphinsFirstScore = 97;
+dolphinsSecondScore = 112;
+dolphinsThirdScore = 101;
+
+dolphinsAverageScore 
+    = getAverageTeamScore(dolphinsFirstScore, dolphinsSecondScore, dolphinsThirdScore);
+
+koalasFirstScore = 109;
+koalasSecondScore = 95;
+koalasThirdScore = 123;
+
+koalasAverageScore 
+    = getAverageTeamScore(koalasFirstScore, koalasSecondScore, koalasThirdScore);
+
+dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore);
+
+// Data Bonus 2
+dolphinsFirstScore = 97;
+dolphinsSecondScore = 112;
+dolphinsThirdScore = 101;
+
+dolphinsAverageScore 
+    = getAverageTeamScore(dolphinsFirstScore, dolphinsSecondScore, dolphinsThirdScore);
+
+koalasFirstScore = 109;
+koalasSecondScore = 95;
+koalasThirdScore = 106;
+
+koalasAverageScore 
+    = getAverageTeamScore(koalasFirstScore, koalasSecondScore, koalasThirdScore);
+
+dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore);
+
+
+// Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+// § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
