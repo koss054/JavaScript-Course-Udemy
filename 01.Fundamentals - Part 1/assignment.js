@@ -44,3 +44,24 @@ console.log(description);
 // Assignment - Strings and Template Literal
 description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
 console.log(description);
+
+// Assignment - Taking Decisions: if / else Statements
+function isCountryPopulationAboveAverage(population, averageCountryPopulation, country) {
+  if (population > averageCountryPopulation)  {
+    console.log(`${country}'s population is above average`);
+  } else {
+    console.log(`${country}'s population is ${averageCountryPopulation - population} million below average`);
+  }
+}
+
+isCountryPopulationAboveAverage(population, averageCountryPopulation, country);
+
+let populationBeforeTempChange = population;
+
+population = 13000000;
+isCountryPopulationAboveAverage(population, averageCountryPopulation, country);
+
+population = 130000000;
+isCountryPopulationAboveAverage(population, averageCountryPopulation, country);
+
+population = populationBeforeTempChange;
