@@ -108,3 +108,12 @@ if (!neighbors.includes("Germany")) {
 const index = neighbors.indexOf("Turkey");
 neighbors[index] = "Macedonia";
 console.log(neighbors);
+
+// Assignment - Introduction to Objects
+const myCountry = {
+    country: "Bulgaria",
+    capital: "Sofia",
+    language: "Bulgarian",
+    population: 7_000_000,
+    neighbors: ["Romania", "Turkey", "Serbia", "Macedonia"]
+};
