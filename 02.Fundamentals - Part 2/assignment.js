@@ -1,5 +1,5 @@
 // Assignment - Functions
-function describeCountry(country, population, capitalCity) {
+/* function describeCountry(country, population, capitalCity) {
     return `${country} has ${population} million people and its capital city is ${capitalCity}`;
 }
 
@@ -9,7 +9,7 @@ const germany = describeCountry("Germany", 83000000, "Berlin");
 
 console.log(bulgaria);
 console.log(romania);
-console.log(germany);
+console.log(germany); */
 
 // Assignment - Function Declarations vs. Expressions
 const worldPopulation = 7_900_000_000;
@@ -21,6 +21,7 @@ function percentageOfWorld1(population, countryName) {
     return `${countryName} has ${populationForString} million people, so it's about ${populationPercentage}% of the world population`;
 }
 
+/*
 let china = percentageOfWorld1(1_441_000_000, "China");
 let brazil = percentageOfWorld1(212_000_000, "Brazil");
 let portugal = percentageOfWorld1(10_000_000, "Portugal");
@@ -44,10 +45,10 @@ portugal = percentageOfWorld2(10_000_000, "Portugal");
 console.log("Function Expression");
 console.log(china);
 console.log(brazil);
-console.log(portugal);
+console.log(portugal); */
 
 // Assignment - Arrow Functions
-const percentageOfWorld3 = (population, countryName) => {
+/* const percentageOfWorld3 = (population, countryName) => {
     const populationPercentage = ((population / worldPopulation) * 100).toFixed(1);
     const populationForString = population / 1_000_000;
     return `${countryName} has ${populationForString} million people, so it's about ${populationPercentage}% of the world population`;
@@ -60,4 +61,17 @@ portugal = percentageOfWorld3(10_000_000, "Portugal");
 console.log("Arrow Function");
 console.log(china);
 console.log(brazil);
-console.log(portugal);
+console.log(portugal); */
+
+// Assignment - Functions Calling Other Functions
+function describePopulation(country, population) {
+    return percentageOfWorld1(population, country);
+}
+
+const bulgaria = describePopulation("Bulgaria", 7_000_000);
+const romania = describePopulation("Romania", 19_000_000);
+const germany = describePopulation("Germany", 83_000_000);
+
+console.log(bulgaria);
+console.log(romania);
+console.log(germany); 
