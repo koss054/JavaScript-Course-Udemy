@@ -25,6 +25,7 @@ let china = percentageOfWorld1(1_441_000_000, "China");
 let brazil = percentageOfWorld1(212_000_000, "Brazil");
 let portugal = percentageOfWorld1(10_000_000, "Portugal");
 
+console.log("Function Declaration")
 console.log(china);
 console.log(brazil);
 console.log(portugal);
@@ -40,6 +41,23 @@ china = percentageOfWorld2(1_441_000_000, "China");
 brazil = percentageOfWorld2(212_000_000, "Brazil");
 portugal = percentageOfWorld2(10_000_000, "Portugal");
 
+console.log("Function Expression");
+console.log(china);
+console.log(brazil);
+console.log(portugal);
+
+// Assignment - Arrow Functions
+const percentageOfWorld3 = (population, countryName) => {
+    const populationPercentage = ((population / worldPopulation) * 100).toFixed(1);
+    const populationForString = population / 1_000_000;
+    return `${countryName} has ${populationForString} million people, so it's about ${populationPercentage}% of the world population`;
+}
+
+china = percentageOfWorld3(1_441_000_000, "China");
+brazil = percentageOfWorld3(212_000_000, "Brazil");
+portugal = percentageOfWorld3(10_000_000, "Portugal");
+
+console.log("Arrow Function");
 console.log(china);
 console.log(brazil);
 console.log(portugal);
