@@ -91,3 +91,32 @@ if (language === "English" && population < 50000000 && !isIsland) {
 } else {
   console.log(`${country} does not meet your criteria D:`);
 }
+
+// Assignment - The switch Statement
+function checkLanguagePlace(language) {
+  switch (language) {
+    case "hinese":
+    case "mandarin":
+      console.log("MOST number of native speakers!");
+      break;
+    case "spanish":
+      console.log("2nd place in number of native speakers");
+      break;
+    case "english":
+      console.log("3rd place.");
+      break;
+    case "hindi":
+      console.log("Number 4");
+      break;
+    case "arabic":
+      console.log("5th place");
+      break;
+    default:
+      console.log("Great language too! :D");
+      break;
+  }
+}
+
+checkLanguagePlace("mandarin");
+checkLanguagePlace("bulgarian");
+checkLanguagePlace("english");
