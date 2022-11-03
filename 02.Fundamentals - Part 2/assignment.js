@@ -14,15 +14,31 @@ console.log(germany);
 // Assignment - Function Declarations vs. Expressions
 const worldPopulation = 7_900_000_000;
 
+// Function Declaration
 function percentageOfWorld1(population, countryName) {
     const populationPercentage = ((population / worldPopulation) * 100).toFixed(1);
     const populationForString = population / 1_000_000;
     return `${countryName} has ${populationForString} million people, so it's about ${populationPercentage}% of the world population`;
 }
 
-const china = percentageOfWorld1(1_441_000_000, "China");
-const brazil = percentageOfWorld1(212_000_000, "Brazil");
-const portugal = percentageOfWorld1(10_000_000, "Portugal");
+let china = percentageOfWorld1(1_441_000_000, "China");
+let brazil = percentageOfWorld1(212_000_000, "Brazil");
+let portugal = percentageOfWorld1(10_000_000, "Portugal");
+
+console.log(china);
+console.log(brazil);
+console.log(portugal);
+
+// Function Expression
+const percentageOfWorld2 = function(population, countryName) {
+    const populationPercentage = ((population / worldPopulation) * 100).toFixed(1);
+    const populationForString = population / 1_000_000;
+    return `${countryName} has ${populationForString} million people, so it's about ${populationPercentage}% of the world population`;
+}
+
+china = percentageOfWorld2(1_441_000_000, "China");
+brazil = percentageOfWorld2(212_000_000, "Brazil");
+portugal = percentageOfWorld2(10_000_000, "Portugal");
 
 console.log(china);
 console.log(brazil);
