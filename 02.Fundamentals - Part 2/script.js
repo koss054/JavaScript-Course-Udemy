@@ -23,7 +23,8 @@ checkWinner(avgDolphins, avgKoalas); */
 // ********************
 // Coding Challenge #2
 // ********************
-const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+const calcTip = (bill) =>
+  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 /* const calcTotal = (bills, tips) => {
     let totals = new Array();
 
@@ -122,9 +123,9 @@ const tips = new Array();
 const totals = new Array();
 
 for (let i = 0; i < bills.length; i++) {
-    const currentTip = Number(calcTip(bills[i]).toFixed(2));
-    tips.push(currentTip);
-    totals.push(bills[i] + currentTip);
+  const currentTip = Number(calcTip(bills[i]).toFixed(2));
+  tips.push(currentTip);
+  totals.push(bills[i] + currentTip);
 }
 
 console.log(bills);
@@ -133,13 +134,13 @@ console.log(totals);
 
 // Calculate average of array function
 function calcAverage(arr) {
-    let total = 0;
+  let total = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        total += Number(arr[i]);
-    }
+  for (let i = 0; i < arr.length; i++) {
+    total += Number(arr[i]);
+  }
 
-    return Number((total / arr.length)).toFixed(2);
+  return Number(total / arr.length).toFixed(2);
 }
 
 console.log(calcAverage(bills));

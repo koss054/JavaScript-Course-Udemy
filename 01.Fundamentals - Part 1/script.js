@@ -9,11 +9,11 @@
 // Coding Challenge #1
 // ********************
 function isFirstBMIHigher(firstBMI, secondBMI) {
-    return firstBMI > secondBMI;
+  return firstBMI > secondBMI;
 }
 
 function calculateBMI(mass, height) {
-    return (mass / height ** 2).toFixed(1);
+  return (mass / height ** 2).toFixed(1);
 }
 
 // Test Data 1
@@ -46,49 +46,57 @@ checkMarkAndJohnBMI(secondCheckBMI);
 // Coding Challenge #2
 // ********************
 function checkMarkAndJohnBMI(isMarkHigher) {
-    if (isMarkHigher) {
-        console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
-    } else {
-        console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
-    }
+  if (isMarkHigher) {
+    console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+  } else {
+    console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
+  }
 }
 
 // ********************
 // Coding Challenge #3
 // ********************
 function getAverageTeamScore(firstScore, secondScore, thirdScore) {
-    return Math.round((firstScore + secondScore + thirdScore) / 3);
+  return Math.round((firstScore + secondScore + thirdScore) / 3);
 }
 
 function dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore) {
-    console.log(`Dolphins: ${dolphinsAverageScore} - Koalas: ${koalasAverageScore}`);
-    
-    if (dolphinsAverageScore >= 100 || koalasAverageScore >= 100) {
-        if (dolphinsAverageScore > koalasAverageScore) {
-            console.log("Dolphins win!");
-        } else if (dolphinsAverageScore === koalasAverageScore) {
-            console.log("It's a draw!");
-        } else {
-            console.log("Koalas win!");
-        }
+  console.log(
+    `Dolphins: ${dolphinsAverageScore} - Koalas: ${koalasAverageScore}`
+  );
+
+  if (dolphinsAverageScore >= 100 || koalasAverageScore >= 100) {
+    if (dolphinsAverageScore > koalasAverageScore) {
+      console.log("Dolphins win!");
+    } else if (dolphinsAverageScore === koalasAverageScore) {
+      console.log("It's a draw!");
     } else {
-        console.log("No winners - both teams are under 100 points!");
+      console.log("Koalas win!");
     }
+  } else {
+    console.log("No winners - both teams are under 100 points!");
+  }
 }
 
 let dolphinsFirstScore = 96;
 let dolphinsSecondScore = 108;
 let dolphinsThirdScore = 89;
 
-let dolphinsAverageScore 
-    = getAverageTeamScore(dolphinsFirstScore, dolphinsSecondScore, dolphinsThirdScore);
+let dolphinsAverageScore = getAverageTeamScore(
+  dolphinsFirstScore,
+  dolphinsSecondScore,
+  dolphinsThirdScore
+);
 
 let koalasFirstScore = 88;
 let koalasSecondScore = 91;
 let koalasThirdScore = 110;
 
-let koalasAverageScore 
-    = getAverageTeamScore(koalasFirstScore, koalasSecondScore, koalasThirdScore);
+let koalasAverageScore = getAverageTeamScore(
+  koalasFirstScore,
+  koalasSecondScore,
+  koalasThirdScore
+);
 
 dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore);
 
@@ -97,15 +105,21 @@ dolphinsFirstScore = 97;
 dolphinsSecondScore = 112;
 dolphinsThirdScore = 101;
 
-dolphinsAverageScore 
-    = getAverageTeamScore(dolphinsFirstScore, dolphinsSecondScore, dolphinsThirdScore);
+dolphinsAverageScore = getAverageTeamScore(
+  dolphinsFirstScore,
+  dolphinsSecondScore,
+  dolphinsThirdScore
+);
 
 koalasFirstScore = 109;
 koalasSecondScore = 95;
 koalasThirdScore = 123;
 
-koalasAverageScore 
-    = getAverageTeamScore(koalasFirstScore, koalasSecondScore, koalasThirdScore);
+koalasAverageScore = getAverageTeamScore(
+  koalasFirstScore,
+  koalasSecondScore,
+  koalasThirdScore
+);
 
 dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore);
 
@@ -114,15 +128,21 @@ dolphinsFirstScore = 97;
 dolphinsSecondScore = 112;
 dolphinsThirdScore = 101;
 
-dolphinsAverageScore 
-    = getAverageTeamScore(dolphinsFirstScore, dolphinsSecondScore, dolphinsThirdScore);
+dolphinsAverageScore = getAverageTeamScore(
+  dolphinsFirstScore,
+  dolphinsSecondScore,
+  dolphinsThirdScore
+);
 
 koalasFirstScore = 109;
 koalasSecondScore = 95;
 koalasThirdScore = 106;
 
-koalasAverageScore 
-    = getAverageTeamScore(koalasFirstScore, koalasSecondScore, koalasThirdScore);
+koalasAverageScore = getAverageTeamScore(
+  koalasFirstScore,
+  koalasSecondScore,
+  koalasThirdScore
+);
 
 dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore);
 
@@ -134,27 +154,32 @@ dolphinsVersusKoalasResult(dolphinsAverageScore, koalasAverageScore);
 const day = "wednesday";
 
 if (day === "monday") {
-    console.log("Tasks for Monday");
+  console.log("Tasks for Monday");
 } else if (day === "tuesday") {
-    console.log("Tasks for Tuesday");
+  console.log("Tasks for Tuesday");
 } else if (day === "wednesday" || day === "thursday") {
-    console.log("Tasks for the middle of the week");
+  console.log("Tasks for the middle of the week");
 } else if (day === "friday") {
-    console.log("Tasks for Friday");
+  console.log("Tasks for Friday");
 } else if (day === "saturday" || day === "sunday") {
-    console.log("Weekend time!");
+  console.log("Weekend time!");
 } else {
-    console.log("Invalid day!");
+  console.log("Invalid day!");
 }
 
 // ********************
 // Coding Challenge #4
 // ********************
 function tipCalculator(billTotal) {
-    const tip = billTotal >= 50 && billTotal <= 300 ? billTotal * 0.15 : billTotal * 0.2;
-    const totalValue = billTotal + tip;
+  const tip =
+    billTotal >= 50 && billTotal <= 300 ? billTotal * 0.15 : billTotal * 0.2;
+  const totalValue = billTotal + tip;
 
-    console.log(`The bill was ${billTotal.toFixed(2)}, the tip was ${tip.toFixed(2)} and the total value is ${totalValue.toFixed(2)}`);
+  console.log(
+    `The bill was ${billTotal.toFixed(2)}, the tip was ${tip.toFixed(
+      2
+    )} and the total value is ${totalValue.toFixed(2)}`
+  );
 }
 
 tipCalculator(275);

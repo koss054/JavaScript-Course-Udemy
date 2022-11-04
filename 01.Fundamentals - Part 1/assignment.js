@@ -46,11 +46,19 @@ description = `${country} is in ${continent}, and its ${population} million peop
 console.log(description);
 
 // Assignment - Taking Decisions: if / else Statements
-function isCountryPopulationAboveAverage(population, averageCountryPopulation, country) {
-  if (population > averageCountryPopulation)  {
+function isCountryPopulationAboveAverage(
+  population,
+  averageCountryPopulation,
+  country
+) {
+  if (population > averageCountryPopulation) {
     console.log(`${country}'s population is above average`);
   } else {
-    console.log(`${country}'s population is ${averageCountryPopulation - population} million below average`);
+    console.log(
+      `${country}'s population is ${
+        averageCountryPopulation - population
+      } million below average`
+    );
   }
 }
 
@@ -67,11 +75,11 @@ isCountryPopulationAboveAverage(population, averageCountryPopulation, country);
 population = populationBeforeTempChange;
 
 // Assignment - Type Conversion and Coercion          *guessing the output
-console.log('9' - '5');                               //4
-console.log('19' - '13' + '17');                      //617
-console.log('19' - '13' + 17);                        //23
-console.log('123' < 57);                              //false
-console.log(5 + 6 + '4' + 9 - 4 - 2);                 //1143
+console.log("9" - "5"); //4
+console.log("19" - "13" + "17"); //617
+console.log("19" - "13" + 17); //23
+console.log("123" < 57); //false
+console.log(5 + 6 + "4" + 9 - 4 - 2); //1143
 
 // Assignment - Equality Operators
 /* let numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
@@ -124,7 +132,7 @@ checkLanguagePlace("english");
 // Assignment - The Ternary Operator
 let aboveOrBelow = population > averageCountryPopulation ? "above" : "below";
 console.log(`${country}'s population is ${aboveOrBelow} average.`);
- 
+
 population = 13000000;
 aboveOrBelow = population > averageCountryPopulation ? "above" : "below";
 console.log(`${country}'s population is ${aboveOrBelow} average.`);
