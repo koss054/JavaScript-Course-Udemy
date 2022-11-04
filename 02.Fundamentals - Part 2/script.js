@@ -122,7 +122,7 @@ const tips = new Array();
 const totals = new Array();
 
 for (let i = 0; i < bills.length; i++) {
-    const currentTip = calcTip(bills[i]).toFixed(2);
+    const currentTip = Number(calcTip(bills[i]).toFixed(2));
     tips.push(currentTip);
     totals.push(bills[i] + currentTip);
 }
@@ -130,3 +130,18 @@ for (let i = 0; i < bills.length; i++) {
 console.log(bills);
 console.log(tips);
 console.log(totals);
+
+// Calculate average of array function
+function calcAverage(arr) {
+    let total = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        total += Number(arr[i]);
+    }
+
+    return Number((total / arr.length)).toFixed(2);
+}
+
+console.log(calcAverage(bills));
+console.log(calcAverage(tips));
+console.log(calcAverage(totals));
