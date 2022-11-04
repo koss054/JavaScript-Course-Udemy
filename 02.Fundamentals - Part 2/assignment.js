@@ -110,19 +110,40 @@ neighbors[index] = "Macedonia";
 console.log(neighbors);
 
 // Assignment - Introduction to Objects
-const myCountry = {
+/* const myCountry = {
     country: "Bulgaria",
     capital: "Sofia",
     language: "Bulgarian",
     population: 7_000_000,
     neighbors: ["Romania", "Turkey", "Serbia", "Macedonia"]
-};
+}; */
 
 // Assignment - Dot vs. Bracket Notation
-console.log(`${myCountry.country} has ${myCountry.population / 1_000_000} million ${myCountry.language}-speaking people, ${myCountry.neighbors.length} neigboring countries and a capital called ${myCountry.capital}.`);
+/* console.log(`${myCountry.country} has ${myCountry.population / 1_000_000} million ${myCountry.language}-speaking people, ${myCountry.neighbors.length} neigboring countries and a capital called ${myCountry.capital}.`);
 
 myCountry.population += 2_000_000;
 console.log(`${myCountry.population}`);
 
 myCountry['population'] -= 2_000_000;
-console.log(`${myCountry.population}`);
+console.log(`${myCountry.population}`); */
+
+// Assignment - Object Methods
+const myCountry = {
+    country: "Bulgaria",
+    capital: "Sofia",
+    language: "Bulgarian",
+    population: 7_000_000,
+    neighbors: ["Romania", "Turkey", "Serbia", "Macedonia"],
+
+    describe: function() {
+        return `${this.country} has ${this.population / 1_000_000} million ${this.language}-speaking people, ${this.neighbors.length} neigboring countries and a capital called ${this.capital}.`;
+    },
+
+    checkIsland: function() {
+        this.isIsland = this.neighbors.length == 0 ? true : false;
+        return this.isIsland;
+    }
+};
+
+console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
