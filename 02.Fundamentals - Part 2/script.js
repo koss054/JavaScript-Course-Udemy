@@ -1,7 +1,7 @@
 // ********************
 // Coding Challenge #1
 // ********************
-const calcAverage = (firstScore, secondScore, thirdScore) => (firstScore + secondScore + thirdScore) / 3;
+/* const calcAverage = (firstScore, secondScore, thirdScore) => (firstScore + secondScore + thirdScore) / 3;
 const checkWinner = (avgDolphins, avgKoalas) => {
     if (avgDolphins >= avgKoalas * 2) {
         console.log(`Dolphins win (D: ${avgDolphins} vs. K: ${avgKoalas})`);
@@ -18,14 +18,13 @@ checkWinner(avgDolphins, avgKoalas);
 
 avgDolphins = calcAverage(85, 54, 41);
 avgKoalas = calcAverage(23, 34, 27);
-checkWinner(avgDolphins, avgKoalas);
+checkWinner(avgDolphins, avgKoalas); */
 
 // ********************
 // Coding Challenge #2
 // ********************
 const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-
-const calcTotal = (bills, tips) => {
+/* const calcTotal = (bills, tips) => {
     let totals = new Array();
 
     for (let i = 0; i < bills.length; i++) {
@@ -41,12 +40,12 @@ const total = calcTotal(bills, tips);
 
 console.log(`Bills ${bills}`);
 console.log(`Tips ${tips}`);
-console.log(`Totals ${total}`);
+console.log(`Totals ${total}`); */
 
 // ********************
 // Dot vs. Bracket Notation Challenge
 // ********************
-const jonas = {
+/* const jonas = {
     firstName: "Jonas",
     birthYear: 1991,
     job: "teacher",
@@ -63,21 +62,21 @@ const jonas = {
     }
 };
 
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`);
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`); */
 
 // ********************
 // Object Methods Challenge
 // ********************
-jonas.calcAge();
+/* jonas.calcAge();
 console.log(jonas.getSummary());
 
 jonas.hasDriversLicense = false;
-console.log(jonas.getSummary());
+console.log(jonas.getSummary()); */
 
 // ********************
 // Coding Challenge #3
 // ********************
-const mark = {
+/* const mark = {
     firstName: "Mark",
     lastName: "Miller",
     mass: 78,
@@ -113,4 +112,21 @@ const john = {
 
 console.log(mark.calcBMI() > john.calcBMI() 
     ? `${mark.fullName()}'s BMI (${mark.BMI}) is higher than ${john.fullName()}'s (${john.BMI})!`
-    : `${john.fullName()}'s BMI (${john.BMI}) is higher than ${mark.fullName()}'s (${mark.BMI})!`);
+    : `${john.fullName()}'s BMI (${john.BMI}) is higher than ${mark.fullName()}'s (${mark.BMI})!`); */
+
+// ********************
+// Coding Challenge #4
+// ********************
+const bills = new Array(22, 295, 176, 440, 37, 105, 10, 1100, 86, 52);
+const tips = new Array();
+const totals = new Array();
+
+for (let i = 0; i < bills.length; i++) {
+    const currentTip = calcTip(bills[i]).toFixed(2);
+    tips.push(currentTip);
+    totals.push(bills[i] + currentTip);
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
