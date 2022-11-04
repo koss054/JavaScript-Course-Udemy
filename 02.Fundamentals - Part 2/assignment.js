@@ -172,3 +172,14 @@ for (let i = 0; i < listOfNeighbors.length; i++) {
         }
     }
 }
+
+// Assignment - The while Loop
+const percentages3 = new Array();
+let counter = 0;
+
+while (counter < populations.length) {
+    percentages3.push(percentageOfWorld1(populations[counter], countries[counter]));
+    counter++;
+}
+
+console.log(percentages3);
