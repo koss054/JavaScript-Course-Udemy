@@ -73,3 +73,44 @@ console.log(jonas.getSummary());
 
 jonas.hasDriversLicense = false;
 console.log(jonas.getSummary());
+
+// ********************
+// Coding Challenge #3
+// ********************
+const mark = {
+    firstName: "Mark",
+    lastName: "Miller",
+    mass: 78,
+    height: 1.69,
+
+    fullName: function() {
+        this.fullName = this.firstName + " " + this.lastName;
+        return this.fullName;
+    },
+
+    calcBMI: function() {
+        this.BMI = (this.mass / this.height ** 2).toFixed(1);
+        return this.BMI;
+    }
+};
+
+const john = {
+    firstName: "John",
+    lastName: "Smith",
+    mass: 92,
+    height: 1.95,
+
+    fullName: function() {
+        this.fullName = this.firstName + " " + this.lastName;
+        return this.fullName;
+    },
+
+    calcBMI: function() {
+        this.BMI = (this.mass / this.height ** 2).toFixed(1);
+        return this.BMI;
+    }
+};
+
+console.log(mark.calcBMI() > john.calcBMI() 
+    ? `${mark.fullName()}'s BMI (${mark.BMI}) is higher than ${john.fullName()}'s (${john.BMI})!`
+    : `${john.fullName()}'s BMI (${john.BMI}) is higher than ${mark.fullName()}'s (${mark.BMI})!`);
