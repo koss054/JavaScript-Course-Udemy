@@ -48,7 +48,28 @@ console.log(`Totals ${total}`);
 // ********************
 const jonas = {
     firstName: "Jonas",
-    friends: ["Michael", "Melvin", "Matilda"]
+    birthYear: 1991,
+    job: "teacher",
+    hasDriversLicense: true,
+    friends: ["Michael", "Melvin", "Matilda"],
+
+    calcAge: function() {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${this.hasDriversLicense == true ? 'a' : 'no'} driver's license.`;
+    }
 };
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`);
+
+// ********************
+// Object Methods Challenge
+// ********************
+jonas.calcAge();
+console.log(jonas.getSummary());
+
+jonas.hasDriversLicense = false;
+console.log(jonas.getSummary());
