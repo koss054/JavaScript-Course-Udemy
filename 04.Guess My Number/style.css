@@ -56,6 +56,10 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+p.message {
+  line-height: 4rem;
+}
+
 .number {
   background: #eee;
   color: #333;
@@ -77,9 +81,7 @@ h1 {
 }
 
 .again {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+  display: none;
 }
 
 .guess {
