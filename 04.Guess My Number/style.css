@@ -33,6 +33,15 @@ main {
   justify-content: space-around;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  position: absolute;
+  bottom: 2rem;
+}
 .left {
   width: 52rem;
   display: flex;
