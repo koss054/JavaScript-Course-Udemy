@@ -16,14 +16,14 @@ function hideModal() {
 }
 
 for (let i = 0; i < btnOpenModal.length; i++) {
-    btnOpenModal[i].addEventListener('click', showModal());
+    btnOpenModal[i].addEventListener('click', showModal.bind(this));
 }
 
-btnCloseModal.addEventListener('click', hideModal());
-overlay.addEventListener('click', hideModal());
+btnCloseModal.addEventListener('click', hideModal.bind(this));
+overlay.addEventListener('click', hideModal.bind(this));
 
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && modal.classList.contains('hidden') === false) {
-        hideModal();
+        hideModal.bind(this);
     }
 });
