@@ -129,11 +129,14 @@ const switchPlayer = function() {
 
 const hasPlayerWon = function(playerTotalScoreEl, playerName) {
     const totalScore = parseInt(playerTotalScoreEl.textContent);
+    const playerEl = playerName === 'Player 1' ? player1El : player2El;
 
     if (totalScore >= 100) {
+        diceEl.classList.add('hidden');
         btnRollEl.classList.add('hidden');
         btnHoldEl.classList.add('hidden');
-        alert(`${playerName} has reached 100 points & won!`);
+        playerEl.classList.add('player--winner');
+        playerEl.classList.remove('player--active');
         return true;
     }
 
@@ -149,6 +152,8 @@ const newGame = function() {
     btnHoldEl.classList.remove('hidden');
     player1El.classList.add('player--active');
     player2El.classList.remove('player--active');
+    player1El.classList.remove('player--winner');
+    player2El.classList.remove('player--winner');
 }
 
 btnNewEl.addEventListener('click', newGame.bind(this));
